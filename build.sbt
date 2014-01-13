@@ -7,6 +7,8 @@ assemblySettings
 
 mainClass in assembly := Some("com.example.JettyLauncher")
 
+test in assembly := {}
+
 initialCommands := """
 import _root_.controller._, model._
 import org.joda.time._

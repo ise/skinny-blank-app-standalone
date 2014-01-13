@@ -12,8 +12,8 @@ object SkinnyAppBuild extends Build {
 
   // In some cases, Jety 9.1 looks very slow (didn't investigate the reason)
   //val jettyVersion = "9.1.0.v20131115"
-  //val jettyVersion = "9.0.7.v20131107"
-  val jettyVersion = "8.1.14.v20131031"
+  val jettyVersion = "9.0.7.v20131107"
+  //val jettyVersion = "8.1.14.v20131031"
 
   val _resolovers = Seq(
     "sonatype releases"  at "http://oss.sonatype.org/content/repositories/releases"
