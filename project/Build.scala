@@ -12,7 +12,8 @@ object SkinnyAppBuild extends Build {
 
   // In some cases, Jety 9.1 looks very slow (didn't investigate the reason)
   //val jettyVersion = "9.1.0.v20131115"
-  val jettyVersion = "9.0.7.v20131107"
+  //val jettyVersion = "9.0.7.v20131107"
+  val jettyVersion = "8.1.14.v20131031"
 
   val _resolovers = Seq(
     "sonatype releases"  at "http://oss.sonatype.org/content/repositories/releases"
@@ -24,7 +25,10 @@ object SkinnyAppBuild extends Build {
     "org.skinny-framework" %% "skinny-task"        % skinnyVersion,
     "com.h2database"       %  "h2"                 % "1.3.174", // your JDBC driver
     "ch.qos.logback"       %  "logback-classic"    % "1.0.13",
-    "org.skinny-framework" %% "skinny-test"        % skinnyVersion         % "test"
+    "org.skinny-framework" %% "skinny-test"        % skinnyVersion         % "test",
+    "org.eclipse.jetty"    %  "jetty-webapp"       % jettyVersion          % "compile",
+    "org.eclipse.jetty"    %  "jetty-servlet"      % jettyVersion          % "compile",
+    "org.eclipse.jetty"    %  "jetty-server"       % jettyVersion          % "compile"
   )
   val containerDependencies = Seq(
     "org.eclipse.jetty"  %  "jetty-webapp"       % jettyVersion          % "container",
